@@ -445,15 +445,19 @@ function drawCanvas(spriteNum) {
 
 const shareButton = document.getElementById('share-button')
 const cardImg = document.getElementById('cardImg')
+console.log("cardImg.src:", cardImg.src);
 shareButton.addEventListener('click', event => {
     if (navigator.share) {
       navigator.share({
         title: "My Cardify Card",
-        url: cardImg.src
+        files: cardImg.src
       }).then(() => {
         console.log('Successful share');
       })
-      .catch(console.error);
+      .catch(() => {
+        console.error()
+        download(cardImg.src, "cardify.png");
+      });
     } else {
         download(cardImg.src, "cardify.png");
     }
