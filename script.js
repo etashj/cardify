@@ -200,7 +200,8 @@ function generateRandomString(length) {
 
   
 const clientId = 'a517b42be802471ea6d45a616bb09845';
-const redirectUri = window.location.href;
+//const redirectUri = 'http://127.0.0.1:5500';
+const redirectUri = 'https://card-ify.netlify.app/';
 function loginSpotify() {
     generateCodeVerifierAndChallenge(128).then(({ codeVerifier, codeChallenge }) => {
         console.log('Code Verifier:', codeVerifier);
