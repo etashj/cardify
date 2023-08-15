@@ -64,6 +64,7 @@ const loggedInHandler = {
         parent.appendChild(tiltCard);
         cards.style.display = "none";
         footer.style.display = 'block'
+        cardCanvas.style.display = 'none';
     }
     target[property] = value;
     return true;
@@ -279,6 +280,7 @@ const response = fetch('https://accounts.spotify.com/api/token', {
             title.style.fontSize = "5em";
             parent.appendChild(tiltCard);
             cards.style.display = "none";
+            cardCanvas.style.display = 'none';
         }
     console.error('Error:', error);
     }); 
