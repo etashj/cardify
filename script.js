@@ -97,21 +97,26 @@ window.onload = (event) => {
     context.drawImage(frontImg, 0, 0, 230,    142,     // source rectangle
                    0, 0, card.width, card.height);
 
+    /*
     let rightSide = document.getElementById("right-sidebar"); 
     let leftSide = document.getElementById("left-sidebar"); 
+    let cont = document.getElementById('int-container');
     if ((rightSide.offsetWidth <= 115 || leftSide.offsetWidth <= 115) && (rightSide.style.order != 5 || leftSide.style.order != 5)) {
         rightSide.style.order = 5;
         leftSide.style.order = 5;
         cardContainer.style.width = '100vw'; 
         leftSide.style.width = '46vw'; 
         rightSide.style.width = '46vw'; 
+        cont.style.flexDirection = 'column';
     } else {
         rightSide.style.order = 2;
         leftSide.style.order = 1;
         cardContainer.style.width = '50vw'; 
         leftSide.style.width = '20vw'; 
         rightSide.style.width = '20vw'; 
+        cont.style.flexDirection = 'row';
     }
+    */
 
     let authToken = localStorage.getItem('access_token')
     if (!(authToken)) {
@@ -143,25 +148,29 @@ window.onload = (event) => {
     }
 };
 
+/*
 window.addEventListener('resize', function(event) {
     let rightSide = document.getElementById("right-sidebar"); 
     let leftSide = document.getElementById("left-sidebar"); 
-
+    let cont = document.getElementById('int-container');
     if ((rightSide.offsetWidth <= 115 || leftSide.offsetWidth <= 115) && (rightSide.style.order != 5 || leftSide.style.order != 5)) {
         rightSide.style.order = 5;
         leftSide.style.order = 5;
         cardContainer.style.width = '100vw'; 
-        leftSide.style.width = '45vw'; 
-        rightSide.style.width = '45vw'; 
+        leftSide.style.width = '46vw'; 
+        rightSide.style.width = '46vw'; 
+        cont.style.flexDirection = 'column';
+        cont.style.flexWrap = 'wrap';
     } else {
         rightSide.style.order = 2;
         leftSide.style.order = 1;
         cardContainer.style.width = '50vw'; 
         leftSide.style.width = '20vw'; 
         rightSide.style.width = '20vw'; 
+        cont.style.flexDirection = 'row';
     }
 }, true);
-
+*/
 
 
 // API STUFF
@@ -433,3 +442,26 @@ function drawCanvas(spriteNum) {
         return true; 
     });
 }
+
+const shareButton = document.getElementById('share-button')
+const cardImg = document.getElementById('cardImg')
+shareButton.addEventListener('click', event => {
+    if (navigator.share) {
+      navigator.share({
+        title: "My Cardify Card",
+        url: cardImg.src
+      }).then(() => {
+        console.log('Successful share');
+      })
+      .catch(console.error);
+    } else {
+        download(cardImg.src, "cardify.png");
+    }
+  });
+
+function download(dataurl, filename) {
+    const link = document.createElement("a");
+    link.href = dataurl;
+    link.download = filename;
+    link.click();
+  }

@@ -27,7 +27,14 @@ button {
     
 }
 
-
+.normal-button{
+    font-size: 1em; 
+    padding: 0.3em 1em 0.3em 1em; 
+    margin: 10px; 
+}
+.normal-button:hover{
+    transform: scale3d(1.3);
+}
 
 .tilt-card {
     transition: transform 0.1s ease;
@@ -121,6 +128,7 @@ button {
     display: flex; 
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-width: 0;
 }
 
@@ -140,6 +148,8 @@ img {
     image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+    width: 100%;
+    max-width: 460px;
   }
 
 .loading{
