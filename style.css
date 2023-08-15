@@ -1,0 +1,148 @@
+html{
+    background-color: #191414;
+    color: #1DB954;
+    text-align: center;
+}
+
+html, body{
+    height: 100%; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trip Sans';
+    font-weight: bold;
+    font-style: normal;
+}
+
+button {
+    background-color: #1DB954;
+    font-family: 'Trip Sans';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2em;
+    padding: 0.3em;
+    border-radius: 20px;
+    border-color: transparent;
+    padding-bottom: 0.4em;
+    
+}
+
+
+
+.tilt-card {
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+    padding: 150px;
+    margin-top: -175px;
+}
+
+.tilt-card:hover .signIn {
+    transform: translateZ(12px);
+}
+
+.signIn {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+
+
+#title {
+    font-size: 5em;
+    margin:0.5em;
+    flex: 1;
+
+}
+
+#footer {
+    width: 100%; 
+    position: sticky;
+    bottom: 0px;
+    font-family: 'Trip Sans';
+    margin: 5px; 
+    padding: 3px; 
+    font-size: 0.75em; 
+    flex: 0 1 40px;
+}
+
+.container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    height: 100%;
+}
+
+#int-container {
+    font-family: 'Trip Sans';
+    flex: 2; 
+    width: 100%; 
+    margin: none; 
+    padding: 2px; 
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start; 
+    gap: 5px; 
+}
+
+
+#card-container {
+    flex-grow: 1;
+    flex-direction: row; 
+    justify-content: center;
+    width: 50vw
+}
+
+
+.sidebar{
+    width: 20vw;
+    min-width: 0;
+}
+.child{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    height: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+/*
+#card{
+    background-image: url('images/blank-card-front.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'Pokemon Emerald';
+    color: #636363;
+}
+*/ 
+img { 
+    image-rendering: optimizeSpeed;             /* PREFER SPEED OVER SMOOTHING  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+  }
+
+.loading{
+    width: 5em; 
+}
+

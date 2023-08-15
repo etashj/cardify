@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cardify</title>
+    <link href="fonts/fonts.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="font-family: PokemonEmerald;"> </div>
+    <div class="container">
+        <div id='header'>
+            <h1 id="title">Cardify</h1>
+        </div>
+        <span>
+        <div class="tilt-card">
+            <button id="login-button" class="signIn" onclick="loginSpotify()">Log in with Spotify</button>
+        </div>
+        </span>
+        <div id="int-container">
+            <div id='left-sidebar' class='sidebar child' style = 'order: 1;'> This is the left sidebar
+                <!-- <a href="https://pokemondb.net/pokedex/jigglypuff"><img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/jigglypuff.png" alt="Jigglypuff"></a>
+                -->
+            </div>
+            <div id ='card-container' class="child" style='order: 2;'>
+                <img id = 'cardImg'  class='loading' src='images/loading.gif'>
+            </div>
+            <div id='right-sidebar' class='sidebar child' style = 'order: 3;'> This is the right sidebar</div>
+        </div>
+
+        <div id="footer">
+            About
+        </div>
+    </div>
+    <canvas id = 'card' style="font-family: PokemonEmerald; color: #636363; "></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

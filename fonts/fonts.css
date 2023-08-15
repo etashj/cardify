@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Trip Sans Ultra';
+    src: url('TripSans-Ultra.eot');
+    src: local('Trip Sans Ultra'), local('TripSans-Ultra'),
+        url('TripSans-Ultra.eot?#iefix') format('embedded-opentype'),
+        url('TripSans-Ultra.woff2') format('woff2'),
+        url('TripSans-Ultra.woff') format('woff'),
+        url('TripSans-Ultra.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trip Sans';
+    src: url('TripSans-Bold.eot');
+    src: local('Trip Sans Bold'), local('TripSans-Bold'),
+        url('TripSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('TripSans-Bold.woff2') format('woff2'),
+        url('TripSans-Bold.woff') format('woff'),
+        url('TripSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trip Sans';
+    src: url('TripSans-Medium.eot');
+    src: local('Trip Sans Medium'), local('TripSans-Medium'),
+        url('TripSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('TripSans-Medium.woff2') format('woff2'),
+        url('TripSans-Medium.woff') format('woff'),
+        url('TripSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trip Sans Mono';
+    src: url('TripSansMono-Regular.eot');
+    src: local('Trip Sans Mono Regular'), local('TripSansMono-Regular'),
+        url('TripSansMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TripSansMono-Regular.woff2') format('woff2'),
+        url('TripSansMono-Regular.woff') format('woff'),
+        url('TripSansMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trip Sans';
+    src: url('TripSans-Regular.eot');
+    src: local('Trip Sans Regular'), local('TripSans-Regular'),
+        url('TripSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TripSans-Regular.woff2') format('woff2'),
+        url('TripSans-Regular.woff') format('woff'),
+        url('TripSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PokemonEmerald';
+    src: url('PokemonEmerald.eot');
+    src: url('PokemonEmerald.eot?#iefix') format('embedded-opentype'),
+        url('PokemonEmerald.woff2') format('woff2'),
+        url('PokemonEmerald.woff') format('woff'),
+        url('PokemonEmerald.ttf') format('truetype'),
+        url('PokemonEmerald.svg#PokemonEmerald') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
