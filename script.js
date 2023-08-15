@@ -218,8 +218,8 @@ function generateRandomString(length) {
 
   
 const clientId = 'a517b42be802471ea6d45a616bb09845';
-//const redirectUri = 'http://127.0.0.1:5500';
-const redirectUri = 'https://card-ify.netlify.app/';
+const redirectUri = 'http://127.0.0.1:5500';
+//const redirectUri = 'https://card-ify.netlify.app/';
 function loginSpotify() {
     generateCodeVerifierAndChallenge(128).then(({ codeVerifier, codeChallenge }) => {
         console.log('Code Verifier:', codeVerifier);
@@ -443,14 +443,14 @@ function drawCanvas(spriteNum) {
     });
 }
 
-const shareButton = document.getElementById('share-button')
-const cardImg = document.getElementById('cardImg')
-console.log("cardImg.src:", cardImg.src);
+const shareButton = document.getElementById('share-button');
+const cardImg = document.getElementById('cardImg');
 shareButton.addEventListener('click', event => {
     if (navigator.share) {
       navigator.share({
         title: "My Cardify Card",
-        files: cardImg.src
+        text: "Create your own at card-ify.netlify.app",
+        files:[file],
       }).then(() => {
         console.log('Successful share');
       })
@@ -469,3 +469,8 @@ function download(dataurl, filename) {
     link.download = filename;
     link.click();
   }
+
+const aboutButton = document.getElementById('about-button');
+aboutButton.addEventListener('click', event => {
+    window.location.href = 'about';
+});
