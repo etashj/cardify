@@ -486,3 +486,9 @@ function setSprite(spriteNum) {
                    0, 0, card.width, card.height);
     drawCanvas(spriteNum);
 }
+
+var load = setTimeout(function() {
+    if (document.getElementById('cardImg').classList.contains('loading')) {
+        window.location.reload(); 
+    }
+}, 5000);
