@@ -43,6 +43,8 @@ context.mozImageSmoothingEnabled = false;
 var frontImg = new Image(); // Create new img element
 frontImg.src = "images/blank-card-front.png";
 
+const spriteSelector = document.getElementById('sprite-selector');
+
 var tiltCard = $(".tilt-card")[0];
 var parent = tiltCard.parentNode; 
 let loggedIn = false;
@@ -219,8 +221,8 @@ function generateRandomString(length) {
 
   
 const clientId = 'a517b42be802471ea6d45a616bb09845';
-//const redirectUri = 'http://127.0.0.1:5500';
-const redirectUri = 'https://card-ify.netlify.app/';
+const redirectUri = 'http://127.0.0.1:5500';
+//const redirectUri = 'https://card-ify.netlify.app/';
 function loginSpotify() {
     generateCodeVerifierAndChallenge(128).then(({ codeVerifier, codeChallenge }) => {
         console.log('Code Verifier:', codeVerifier);
@@ -459,3 +461,16 @@ const aboutButton = document.getElementById('about-button');
 aboutButton.addEventListener('click', event => {
     window.location.href = 'about';
 });
+
+const signOutButton = document.getElementById('sign-out-button');
+signOutButton.addEventListener('click', event => {
+    localStorage.clear('access_token')
+    window.location.reload();
+});
+
+
+function setSprite(spriteNum) {
+    console.log(spriteNum);
+    spriteSelector.style.display = 'none';
+    document.getElementById('sprite-preview').src = `images/sprites/images/trainer_${spriteNum}.png`
+}

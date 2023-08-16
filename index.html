@@ -25,18 +25,128 @@
         <div id="int-container">
             <div id='left-sidebar' class='sidebar child' style = 'order: 1;'> 
                 <button id="share-button" class='normal-button'>Share Card</button>
+                <button id="sign-out-button" class='normal-button'>Sign Out</button>
                 <button id="about-button" class='normal-button' href = 'about'>About</button>
                 <a href="https://pokemondb.net/pokedex/jigglypuff"><img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/jigglypuff.png" alt="Jigglypuff"></a>
             </div>
             <div id ='card-container' class="child" style='order: 2;'>
                 <img id = 'cardImg'  class='loading' src='images/loading.gif'>
             </div>
-            <div id='right-sidebar' class='sidebar child' style = 'order: 3;'> This is the right sidebar</div>
+            <div id='right-sidebar' class='sidebar child' style = 'order: 3;'>
+                <img src='images/sprites/images/trainer_0' id='sprite-preview'>
+                <button id = 'dropdown-but' class='normal-button' onclick='document.getElementById("sprite-selector").style.display="block";'>Change Character</button>
+            </div>
         </div>
 
         <div id="footer">
             <a href='/about' style='color:#1DB954;text-decoration: none;'>About</a>
         </div>
+    </div>
+    <div id='sprite-selector' style='display:none;'>
+        <img src="images/sprites/images/trainer_0.png" class="sprite-menu-preview" onclick="setSprite(0)" loading="lazy">
+        <img src="images/sprites/images/trainer_1.png" class="sprite-menu-preview" onclick="setSprite(1)" loading="lazy">
+        <img src="images/sprites/images/trainer_2.png" class="sprite-menu-preview" onclick="setSprite(2)" loading="lazy">
+        <img src="images/sprites/images/trainer_3.png" class="sprite-menu-preview" onclick="setSprite(3)" loading="lazy">
+        <img src="images/sprites/images/trainer_4.png" class="sprite-menu-preview" onclick="setSprite(4)" loading="lazy">
+        <img src="images/sprites/images/trainer_5.png" class="sprite-menu-preview" onclick="setSprite(5)" loading="lazy">
+        <img src="images/sprites/images/trainer_6.png" class="sprite-menu-preview" onclick="setSprite(6)" loading="lazy">
+        <img src="images/sprites/images/trainer_7.png" class="sprite-menu-preview" onclick="setSprite(7)" loading="lazy">
+        <img src="images/sprites/images/trainer_8.png" class="sprite-menu-preview" onclick="setSprite(8)" loading="lazy">
+        <img src="images/sprites/images/trainer_9.png" class="sprite-menu-preview" onclick="setSprite(9)" loading="lazy">
+        <img src="images/sprites/images/trainer_10.png" class="sprite-menu-preview" onclick="setSprite(10)" loading="lazy">
+        <img src="images/sprites/images/trainer_11.png" class="sprite-menu-preview" onclick="setSprite(11)" loading="lazy">
+        <img src="images/sprites/images/trainer_12.png" class="sprite-menu-preview" onclick="setSprite(12)" loading="lazy">
+        <img src="images/sprites/images/trainer_13.png" class="sprite-menu-preview" onclick="setSprite(13)" loading="lazy">
+        <img src="images/sprites/images/trainer_14.png" class="sprite-menu-preview" onclick="setSprite(14)" loading="lazy">
+        <img src="images/sprites/images/trainer_15.png" class="sprite-menu-preview" onclick="setSprite(15)" loading="lazy">
+        <img src="images/sprites/images/trainer_16.png" class="sprite-menu-preview" onclick="setSprite(16)" loading="lazy">
+        <img src="images/sprites/images/trainer_17.png" class="sprite-menu-preview" onclick="setSprite(17)" loading="lazy">
+        <img src="images/sprites/images/trainer_18.png" class="sprite-menu-preview" onclick="setSprite(18)" loading="lazy">
+        <img src="images/sprites/images/trainer_19.png" class="sprite-menu-preview" onclick="setSprite(19)" loading="lazy">
+        <img src="images/sprites/images/trainer_20.png" class="sprite-menu-preview" onclick="setSprite(20)" loading="lazy">
+        <img src="images/sprites/images/trainer_21.png" class="sprite-menu-preview" onclick="setSprite(21)" loading="lazy">
+        <img src="images/sprites/images/trainer_22.png" class="sprite-menu-preview" onclick="setSprite(22)" loading="lazy">
+        <img src="images/sprites/images/trainer_23.png" class="sprite-menu-preview" onclick="setSprite(23)" loading="lazy">
+        <img src="images/sprites/images/trainer_24.png" class="sprite-menu-preview" onclick="setSprite(24)" loading="lazy">
+        <img src="images/sprites/images/trainer_25.png" class="sprite-menu-preview" onclick="setSprite(25)" loading="lazy">
+        <img src="images/sprites/images/trainer_26.png" class="sprite-menu-preview" onclick="setSprite(26)" loading="lazy">
+        <img src="images/sprites/images/trainer_27.png" class="sprite-menu-preview" onclick="setSprite(27)" loading="lazy">
+        <img src="images/sprites/images/trainer_28.png" class="sprite-menu-preview" onclick="setSprite(28)" loading="lazy">
+        <img src="images/sprites/images/trainer_29.png" class="sprite-menu-preview" onclick="setSprite(29)" loading="lazy">
+        <img src="images/sprites/images/trainer_30.png" class="sprite-menu-preview" onclick="setSprite(30)" loading="lazy">
+        <img src="images/sprites/images/trainer_31.png" class="sprite-menu-preview" onclick="setSprite(31)" loading="lazy">
+        <img src="images/sprites/images/trainer_32.png" class="sprite-menu-preview" onclick="setSprite(32)" loading="lazy">
+        <img src="images/sprites/images/trainer_33.png" class="sprite-menu-preview" onclick="setSprite(33)" loading="lazy">
+        <img src="images/sprites/images/trainer_34.png" class="sprite-menu-preview" onclick="setSprite(34)" loading="lazy">
+        <img src="images/sprites/images/trainer_35.png" class="sprite-menu-preview" onclick="setSprite(35)" loading="lazy">
+        <img src="images/sprites/images/trainer_36.png" class="sprite-menu-preview" onclick="setSprite(36)" loading="lazy">
+        <img src="images/sprites/images/trainer_37.png" class="sprite-menu-preview" onclick="setSprite(37)" loading="lazy">
+        <img src="images/sprites/images/trainer_38.png" class="sprite-menu-preview" onclick="setSprite(38)" loading="lazy">
+        <img src="images/sprites/images/trainer_39.png" class="sprite-menu-preview" onclick="setSprite(39)" loading="lazy">
+        <img src="images/sprites/images/trainer_40.png" class="sprite-menu-preview" onclick="setSprite(40)" loading="lazy">
+        <img src="images/sprites/images/trainer_41.png" class="sprite-menu-preview" onclick="setSprite(41)" loading="lazy">
+        <img src="images/sprites/images/trainer_42.png" class="sprite-menu-preview" onclick="setSprite(42)" loading="lazy">
+        <img src="images/sprites/images/trainer_43.png" class="sprite-menu-preview" onclick="setSprite(43)" loading="lazy">
+        <img src="images/sprites/images/trainer_44.png" class="sprite-menu-preview" onclick="setSprite(44)" loading="lazy">
+        <img src="images/sprites/images/trainer_45.png" class="sprite-menu-preview" onclick="setSprite(45)" loading="lazy">
+        <img src="images/sprites/images/trainer_46.png" class="sprite-menu-preview" onclick="setSprite(46)" loading="lazy">
+        <img src="images/sprites/images/trainer_47.png" class="sprite-menu-preview" onclick="setSprite(47)" loading="lazy">
+        <img src="images/sprites/images/trainer_48.png" class="sprite-menu-preview" onclick="setSprite(48)" loading="lazy">
+        <img src="images/sprites/images/trainer_49.png" class="sprite-menu-preview" onclick="setSprite(49)" loading="lazy">
+        <img src="images/sprites/images/trainer_50.png" class="sprite-menu-preview" onclick="setSprite(50)" loading="lazy">
+        <img src="images/sprites/images/trainer_51.png" class="sprite-menu-preview" onclick="setSprite(51)" loading="lazy">
+        <img src="images/sprites/images/trainer_52.png" class="sprite-menu-preview" onclick="setSprite(52)" loading="lazy">
+        <img src="images/sprites/images/trainer_53.png" class="sprite-menu-preview" onclick="setSprite(53)" loading="lazy">
+        <img src="images/sprites/images/trainer_54.png" class="sprite-menu-preview" onclick="setSprite(54)" loading="lazy">
+        <img src="images/sprites/images/trainer_55.png" class="sprite-menu-preview" onclick="setSprite(55)" loading="lazy">
+        <img src="images/sprites/images/trainer_56.png" class="sprite-menu-preview" onclick="setSprite(56)" loading="lazy">
+        <img src="images/sprites/images/trainer_57.png" class="sprite-menu-preview" onclick="setSprite(57)" loading="lazy">
+        <img src="images/sprites/images/trainer_58.png" class="sprite-menu-preview" onclick="setSprite(58)" loading="lazy">
+        <img src="images/sprites/images/trainer_59.png" class="sprite-menu-preview" onclick="setSprite(59)" loading="lazy">
+        <img src="images/sprites/images/trainer_60.png" class="sprite-menu-preview" onclick="setSprite(60)" loading="lazy">
+        <img src="images/sprites/images/trainer_61.png" class="sprite-menu-preview" onclick="setSprite(61)" loading="lazy">
+        <img src="images/sprites/images/trainer_62.png" class="sprite-menu-preview" onclick="setSprite(62)" loading="lazy">
+        <img src="images/sprites/images/trainer_63.png" class="sprite-menu-preview" onclick="setSprite(63)" loading="lazy">
+        <img src="images/sprites/images/trainer_64.png" class="sprite-menu-preview" onclick="setSprite(64)" loading="lazy">
+        <img src="images/sprites/images/trainer_65.png" class="sprite-menu-preview" onclick="setSprite(65)" loading="lazy">
+        <img src="images/sprites/images/trainer_66.png" class="sprite-menu-preview" onclick="setSprite(66)" loading="lazy">
+        <img src="images/sprites/images/trainer_67.png" class="sprite-menu-preview" onclick="setSprite(67)" loading="lazy">
+        <img src="images/sprites/images/trainer_68.png" class="sprite-menu-preview" onclick="setSprite(68)" loading="lazy">
+        <img src="images/sprites/images/trainer_69.png" class="sprite-menu-preview" onclick="setSprite(69)" loading="lazy">
+        <img src="images/sprites/images/trainer_70.png" class="sprite-menu-preview" onclick="setSprite(70)" loading="lazy">
+        <img src="images/sprites/images/trainer_71.png" class="sprite-menu-preview" onclick="setSprite(71)" loading="lazy">
+        <img src="images/sprites/images/trainer_72.png" class="sprite-menu-preview" onclick="setSprite(72)" loading="lazy">
+        <img src="images/sprites/images/trainer_73.png" class="sprite-menu-preview" onclick="setSprite(73)" loading="lazy">
+        <img src="images/sprites/images/trainer_74.png" class="sprite-menu-preview" onclick="setSprite(74)" loading="lazy">
+        <img src="images/sprites/images/trainer_75.png" class="sprite-menu-preview" onclick="setSprite(75)" loading="lazy">
+        <img src="images/sprites/images/trainer_76.png" class="sprite-menu-preview" onclick="setSprite(76)" loading="lazy">
+        <img src="images/sprites/images/trainer_77.png" class="sprite-menu-preview" onclick="setSprite(77)" loading="lazy">
+        <img src="images/sprites/images/trainer_78.png" class="sprite-menu-preview" onclick="setSprite(78)" loading="lazy">
+        <img src="images/sprites/images/trainer_79.png" class="sprite-menu-preview" onclick="setSprite(79)" loading="lazy">
+        <img src="images/sprites/images/trainer_80.png" class="sprite-menu-preview" onclick="setSprite(80)" loading="lazy">
+        <img src="images/sprites/images/trainer_81.png" class="sprite-menu-preview" onclick="setSprite(81)" loading="lazy">
+        <img src="images/sprites/images/trainer_82.png" class="sprite-menu-preview" onclick="setSprite(82)" loading="lazy">
+        <img src="images/sprites/images/trainer_83.png" class="sprite-menu-preview" onclick="setSprite(83)" loading="lazy">
+        <img src="images/sprites/images/trainer_84.png" class="sprite-menu-preview" onclick="setSprite(84)" loading="lazy">
+        <img src="images/sprites/images/trainer_85.png" class="sprite-menu-preview" onclick="setSprite(85)" loading="lazy">
+        <img src="images/sprites/images/trainer_86.png" class="sprite-menu-preview" onclick="setSprite(86)" loading="lazy">
+        <img src="images/sprites/images/trainer_87.png" class="sprite-menu-preview" onclick="setSprite(87)" loading="lazy">
+        <img src="images/sprites/images/trainer_88.png" class="sprite-menu-preview" onclick="setSprite(88)" loading="lazy">
+        <img src="images/sprites/images/trainer_89.png" class="sprite-menu-preview" onclick="setSprite(89)" loading="lazy">
+        <img src="images/sprites/images/trainer_90.png" class="sprite-menu-preview" onclick="setSprite(90)" loading="lazy">
+        <img src="images/sprites/images/trainer_91.png" class="sprite-menu-preview" onclick="setSprite(91)" loading="lazy">
+        <img src="images/sprites/images/trainer_92.png" class="sprite-menu-preview" onclick="setSprite(92)" loading="lazy">
+        <img src="images/sprites/images/trainer_93.png" class="sprite-menu-preview" onclick="setSprite(93)" loading="lazy">
+        <img src="images/sprites/images/trainer_94.png" class="sprite-menu-preview" onclick="setSprite(94)" loading="lazy">
+        <img src="images/sprites/images/trainer_95.png" class="sprite-menu-preview" onclick="setSprite(95)" loading="lazy">
+        <img src="images/sprites/images/trainer_96.png" class="sprite-menu-preview" onclick="setSprite(96)" loading="lazy">
+        <img src="images/sprites/images/trainer_97.png" class="sprite-menu-preview" onclick="setSprite(97)" loading="lazy">
+        <img src="images/sprites/images/trainer_98.png" class="sprite-menu-preview" onclick="setSprite(98)" loading="lazy">
+        <img src="images/sprites/images/trainer_99.png" class="sprite-menu-preview" onclick="setSprite(99)" loading="lazy">
+        <img src="images/sprites/images/trainer_100.png" class="sprite-menu-preview" onclick="setSprite(100)" loading="lazy">
+        <img src="images/sprites/images/trainer_101.png" class="sprite-menu-preview" onclick="setSprite(101)" loading="lazy">
+        <img src="images/sprites/images/trainer_102.png" class="sprite-menu-preview" onclick="setSprite(102)" loading="lazy">
+        <img src="images/sprites/images/trainer_103.png" class="sprite-menu-preview" onclick="setSprite(103)" loading="lazy">
     </div>
     <canvas id = 'card' style="font-family: PokemonEmerald; color: #636363; "></canvas>
     <script src="script.js"></script>

@@ -190,3 +190,29 @@ p, a{
     min-width: 0;
     margin-top: -250px; 
 }
+
+#sprite-preview{
+    width: 130px; 
+}
+
+#sprite-selector {
+    position: absolute;
+    width: 85vw; 
+    background-color: white;
+    z-index: 1000;
+    margin-left: 7vw; 
+    overflow: scroll;
+    top: 5vw;  
+    padding: 1vw; 
+    max-height: 85wv; 
+}
+
+.sprite-menu-preview{
+    width: 100px; 
+    border:2px solid #191414; 
+    padding: 3px;
+    margin: 2px; 
+}
+.sprite-menu-preview:hover{
+    box-shadow: 0 0 25px #191414; 
+}
