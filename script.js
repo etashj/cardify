@@ -357,10 +357,6 @@ async function apiCalls() {
     const artist_data = await response4.json(); 
 
     let popList = []; 
-    artist_data.items.forEach((artist) => {
-        popList.push(artist.popularity); 
-    });
-
     let lenList = []; 
     track_data.items.forEach((track) => {
         lenList.push(track.duration_ms); 
