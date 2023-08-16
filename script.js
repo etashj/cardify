@@ -39,6 +39,7 @@ var data;
 var cardCanvas = document.getElementById("card");
 var context = cardCanvas.getContext('2d');
 context.imageSmoothingEnabled = false;
+context.mozImageSmoothingEnabled = false;
 var frontImg = new Image(); // Create new img element
 frontImg.src = "images/blank-card-front.png";
 
@@ -88,7 +89,7 @@ window.onload = (event) => {
     let card = document.getElementById("card");
     let cardContainer = document.getElementById("card-container");
 
-    var scaleFactor = 2
+    var scaleFactor = 1
 
     card.width = 230 *scaleFactor;
     card.height = 142 *scaleFactor;
@@ -218,8 +219,8 @@ function generateRandomString(length) {
 
   
 const clientId = 'a517b42be802471ea6d45a616bb09845';
-//const redirectUri = 'http://127.0.0.1:5500';
-const redirectUri = 'https://card-ify.netlify.app/';
+const redirectUri = 'http://127.0.0.1:5500';
+//const redirectUri = 'https://card-ify.netlify.app/';
 function loginSpotify() {
     generateCodeVerifierAndChallenge(128).then(({ codeVerifier, codeChallenge }) => {
         console.log('Code Verifier:', codeVerifier);
@@ -387,44 +388,46 @@ async function apiCalls() {
 function drawCanvas(spriteNum) {
     apiCalls().then((data) => {
         console.log(data)
+        context.lineJoin = "miter";
+        context.miterLimit = 1;
         context.imageSmoothingEnabled = false;
-
+        context.mozImageSmoothingEnabled = false;
         context.fillStyle = "#636363";
-        context.font = "12px PokemonEmerald";
-        context.fillText(`Name: ${data.display_name}`, 40, 96);
+        context.font = "6px PokemonEmerald";
+        context.fillText(`Name: ${data.display_name}`, 40/2, 96/2);
         context.fillStyle = "#d6d6ce";
         const id = Math.floor(1000 + Math.random() * 9000);
-        context.fillText(`IDNo.0${id}`, 272, 49);
+        context.fillText(`IDNo.0${id}`, 272/2, 50/2);
         context.fillStyle = "#636363";
-        context.fillText(`IDNo.0${id}`, 270, 47);
+        context.fillText(`IDNo.0${id}`, 270/2, 48/2);
 
         context.beginPath();
-        context.moveTo(40, 103); 
-        context.lineTo(250, 103); 
+        context.moveTo(40/2, 103/2); 
+        context.lineTo(250/2, 103/2); 
         context.stroke(); 
 
         if (data.product != 'free'){
             star = new Image(); 
             star.src = 'images/star.png'; 
             star.onload = function() {
-                context.drawImage(star, 247, 100, 14, 14);
+                context.drawImage(star, 248/2, 100/2, 14/2, 14/2);
             };
         }
-        context.fillText('PLAYLISTS', 40, 143); 
-        context.fillText('FOLLOWERS', 40, 175); 
-        context.fillText('POPULARITY', 40, 207); 
+        context.fillText('PLAYLISTS', 40/2, 144/2); 
+        context.fillText('FOLLOWERS', 40/2, 176/2); 
+        context.fillText('POPULARITY', 40/2, 208/2); 
 
         context.textAlign = "end";
-        context.fillText(data.playlist_count, 275, 143); 
-        context.fillText(data.followers, 275, 175); 
-        context.fillText(data.average_popularity + '%', 275, 207); 
+        context.fillText(data.playlist_count, 276/2, 144/2); 
+        context.fillText(data.followers, 276/2, 176/2); 
+        context.fillText(data.average_popularity + '%', 276/2, 208/2); 
         context.textAlign = "start";
 
         if (spriteNum>0){
             sprite = new Image(); 
             sprite.src = `images/sprites/images/trainer_${spriteNum}.png`; 
             sprite.onload = function() {
-                context.drawImage(sprite, 297, 65, 130, 130);
+                context.drawImage(sprite, 297/2, 65/2, 130/2, 130/2);
                 const cardImg = document.getElementById('cardImg'); 
                 cardImg.src = cardCanvas.toDataURL(); 
                 cardImg.classList.remove('loading'); 
@@ -446,29 +449,11 @@ function drawCanvas(spriteNum) {
 const shareButton = document.getElementById('share-button');
 const cardImg = document.getElementById('cardImg');
 shareButton.addEventListener('click', event => {
-    if (navigator.share) {
-      navigator.share({
-        title: "My Cardify Card",
-        text: "Create your own at card-ify.netlify.app",
-        files:[file],
-      }).then(() => {
-        console.log('Successful share');
-      })
-      .catch(() => {
-        console.error()
-        download(cardImg.src, "cardify.png");
-      });
-    } else {
-        download(cardImg.src, "cardify.png");
-    }
-  });
-
-function download(dataurl, filename) {
     const link = document.createElement("a");
-    link.href = dataurl;
-    link.download = filename;
+    link.href = cardImg.src;
+    link.download = 'cardify.png';
     link.click();
-  }
+  });
 
 const aboutButton = document.getElementById('about-button');
 aboutButton.addEventListener('click', event => {

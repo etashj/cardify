@@ -142,6 +142,8 @@ button {
 }
 */ 
 img { 
+    image-rendering: pixelated; 
+    image-rendering: crisp-edges;
     image-rendering: optimizeSpeed;             /* PREFER SPEED OVER SMOOTHING  */
     image-rendering: -moz-crisp-edges;          /* Firefox                        */
     image-rendering: -o-crisp-edges;            /* Opera                          */
@@ -156,3 +158,35 @@ img {
     width: 5em; 
 }
 
+ul{
+    line-height: 1.25em;
+    font-family: 'Trip Sans';
+    margin-left:25%; 
+    margin-right:25%; 
+}
+
+p, a{
+    font-family: 'Trip Sans';
+}
+
+#ray, #home {
+    width: 100px; 
+    
+}
+#home {
+    width: 100px; 
+    filter: invert(1);
+}
+
+#footer-abt{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    height: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 0;
+    margin-top: -250px; 
+}
