@@ -484,7 +484,7 @@ function setSprite(spriteNum) {
 }
 
 var load = setTimeout(function() {
-    if (document.getElementById('cardImg').classList.contains('loading')) {
+    if (document.getElementById('cardImg').classList.contains('loading') && document.getElementById('cardImg').style.display=='block') {
         window.location.reload(); 
     }
 }, 5000);
