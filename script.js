@@ -44,6 +44,7 @@ var frontImg = new Image(); // Create new img element
 frontImg.src = "images/blank-card-front.png";
 
 const spriteSelector = document.getElementById('sprite-selector');
+var spriteNumGlobal=1; 
 
 var tiltCard = $(".tilt-card")[0];
 var parent = tiltCard.parentNode; 
@@ -67,7 +68,7 @@ const loggedInHandler = {
         cards.style.display = "flex";
         footer.style.display = 'none'
         console.log('canvas drawing')
-        drawCanvas(70)
+        drawCanvas(spriteNumGlobal)
         console.log('canvas drawn')
     } else {
         //login.style.display = "block";
@@ -389,6 +390,7 @@ async function apiCalls() {
 
 function drawCanvas(spriteNum) {
     apiCalls().then((data) => {
+        cardCanvas.style.display='block'
         console.log(data)
         context.lineJoin = "miter";
         context.miterLimit = 1;
@@ -470,7 +472,17 @@ signOutButton.addEventListener('click', event => {
 
 
 function setSprite(spriteNum) {
+    spriteNumGlobal = spriteNum; 
     console.log(spriteNum);
     spriteSelector.style.display = 'none';
     document.getElementById('sprite-preview').src = `images/sprites/images/trainer_${spriteNum}.png`
+    context.clearRect(0, 0,cardCanvas.width, cardCanvas.height);
+    var scaleFactor = 1
+    card.width = 230 *scaleFactor;
+    card.height = 142 *scaleFactor;
+    
+    //context.drawImage(frontImg, 0, 0);
+    context.drawImage(frontImg, 0, 0, 230,    142,     // source rectangle
+                   0, 0, card.width, card.height);
+    drawCanvas(spriteNum);
 }
