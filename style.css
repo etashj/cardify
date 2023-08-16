@@ -151,7 +151,7 @@ img {
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
     width: 100%;
-    max-width: 460px;
+    max-width: 35vw;
   }
 
 .loading{
